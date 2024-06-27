@@ -14,7 +14,7 @@ const collectEmployees = function () {
     const lastName=prompt ("Last Name");
     console.log(lastName);
   
-    let salary=prompt ("Salary");
+    const salary= parseInt(prompt("Salary"));
     console.log(salary);
     if (isNaN(salary)){
       salary=0
