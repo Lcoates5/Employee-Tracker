@@ -14,7 +14,7 @@ const collectEmployees = function () {
     const lastName=prompt ("Last Name");
     console.log(lastName);
   
-    const salary= parseInt(prompt("Salary"));
+    const salary= parseFloat(prompt("Salary"));
     console.log(salary);
     if (isNaN(salary)){
       salary=0
@@ -47,12 +47,19 @@ const displayAverageSalary = function (employeesArray) {
 };
 
 const avgSalary = totalSalary / employeesArray.length;
-    console.log(`The average employee salary between our ${employeesArray.length} employees is $${avgSalary}`);
-};
+const numberOfEmployees = employeesArray.length;
+
+if (employeesArray.some(employee => employee.salary % 1 !== 0)) {
+  
+  console.log(`The average employee salary between our ${numberOfEmployees} employee(s) is $${avgSalary.toFixed(2)}`);
+} else {
+    console.log(`The average employee salary between our ${numberOfEmployees} employees is $${avgSalary.toFixed(2)}`);
+}};
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
 };
+
 
 /*
   ====================
